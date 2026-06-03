@@ -1,52 +1,31 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.7.4, 30 July 2025) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,withhyper]{altacv}
-%% AltaCV uses the fontawesome5 and simpleicons packages.
-%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
 
-% Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{
+left=1.25cm,
+right=1.25cm,
+top=1.2cm,
+bottom=1.2cm,
+columnsep=1.2cm
+}
 
-% The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-% WHEN COMPILING WITH XELATEX PLEASE USE
-% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \iftutex
-  % If using xelatex or lualatex:
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
-  \renewcommand{\familydefault}{\sfdefault}
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
 \else
-  % If using pdflatex:
-  \usepackage[rm]{roboto}
-  \usepackage[defaultsans]{lato}
-  % \usepackage{sourcesanspro}
-  \renewcommand{\familydefault}{\sfdefault}
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+\renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{DarkPastelRed}{HTML}{450808}
 \definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
+
 \colorlet{name}{black}
 \colorlet{tagline}{PastelRed}
 \colorlet{heading}{DarkPastelRed}
@@ -56,243 +35,267 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
-% Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsectionfont}{\Large\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
-\renewcommand{\cvRatingMarker}{\faCircle}
-% ...and the markers for the date/location for \cvevent
-% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
-% \renewcommand{\cvLocationMarker}{\faMapMarker*}
-
-
-% If your CV/résumé is in a language other than English,
-% then you probably want to change these so that when you
-% copy-paste from the PDF or run pdftotext, the location
-% and date marker icons for \cvevent will paste as correct
-% translations. For example Spanish:
-% \renewcommand{\locationname}{Ubicación}
-% \renewcommand{\datename}{Fecha}
-
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
-% \input{pubs-authoryear.cfg}
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
-\input{pubs-num.cfg}
-
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
 
 \begin{document}
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
-%% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
-% \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
-\personalinfo{%
-  % Not all of these are required!
-  \email{your_name@email.com}
-  \phone{000-00-0000}
-  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Location, COUNTRY}
-  \homepage{www.homepage.com}
-  % \twitter{@twitterhandle}
-  \xtwitter{@x-handle}
-  \linkedin{your_id}
-  \github{your_id}
-  \orcid{0000-0000-0000-0000}
-  %% You can add your own arbitrary detail with
-  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+\name{Vishal Shrivastava}
+\tagline{Founding Engineer | AI Systems Architect | Product Builder}
 
-  %% Or you can declare your own field with
-  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-  \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-  \gitlab{your_id}
-  %%
-  %% For services and platforms like Mastodon where there isn't a
-  %% straightforward relation between the user ID/nickname and the hyperlink,
-  %% you can use \printinfo directly e.g.
-  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
-  %% But if you absolutely want to create new dedicated info fields for
-  %% such platforms, then use \NewInfoField* with a star:
-  \NewInfoField*{mastodon}{\faMastodon}
-  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
-  %% the full hyperlink.
-  \mastodon{@username@instance}{https://instance.url/@username}
+\personalinfo{
+\email{[vishubth@gmail.com](mailto:vishubth@gmail.com)}
+\location{Bangalore, India}
+\linkedin{vishushri}
+\github{vishubth}
 }
 
 \makecvheader
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.34}
 
-% Start a 2-column paracol. Both the left and right columns will automatically
-% break across pages if things get too long.
 \begin{paracol}{2}
-\cvsection{Experience}
 
-\cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+\cvsection{Executive Summary}
+
+Founding Engineer and AI Systems Architect with 6+ years of experience building AI platforms, fintech systems, data infrastructure, document intelligence solutions, cloud-native applications, and startup technology products.
+
+Co-founded two startups, delivered 20+ projects across international markets, and led end-to-end product development from architecture and platform design through deployment and operational delivery.
+
+Specialized in AI agents, RAG systems, MCP integrations, backend architecture, document intelligence, platform engineering, and enterprise automation.
+
+\cvsection{AI Platform Portfolio}
+
+\cvevent{Digital Asset Fundraising Operations Platform (NoGuy)}{}{}{}
+
 \begin{itemize}
-\item Job description 1
-\item Job description 2
+\item Architected investor onboarding, allocation management, transaction tracking, and blockchain payment verification workflows.
+\item Designed layered FastAPI architecture using service, repository, and API orchestration patterns.
+\item Built fintech operational tooling supporting digital asset fundraising and investor lifecycle management.
 \end{itemize}
 
 \divider
 
-\cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
+\cvevent{AI Document Intelligence Engine}{}{}{}
 
-\cvsection{Projects}
-
-\cvevent{Project 1}{Funding agency/institution}{}{}
 \begin{itemize}
-\item Details
+\item Built OCR and LLM-powered document intelligence workflows.
+\item Implemented extraction, chunking, schema validation, and profile generation pipelines.
+\item Designed for compliance, onboarding, due diligence, and identity intelligence use cases.
 \end{itemize}
 
 \divider
 
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+\cvevent{AI Procurement Intelligence Platform}{}{}{}
 
-\medskip
-
-\cvsection{A Day of My Life}
-
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-}
-
-% use ONLY \newpage if you want to force a page break for
-% ONLY the current column
-\newpage
-
-\cvsection{Publications}
-
-%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
-%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
-%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
-\mynames{Lim/Lian\bibnamedelima Tze,
-  Wong/Lian\bibnamedelima Tze,
-  Lim/Tracy,
-  Lim/L.\bibnamedelimi T.}
-%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+\begin{itemize}
+\item Building AI-native procurement intelligence and vendor evaluation platform.
+\item Leveraging agentic workflows, retrieval systems, enterprise document processing, and workflow automation.
+\item Designed around reusable AI infrastructure supporting future enterprise procurement operations.
+\end{itemize}
 
 \divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+\cvevent{ANC-VSNLMS Active Noise Cancellation Platform}{}{}{}
+
+\begin{itemize}
+\item Developed adaptive DSP platform implementing VSNLMS filtering.
+\item Built real-time audio processing, benchmarking, and visualization pipelines.
+\item Focused on low-latency signal processing and convergence optimization.
+\end{itemize}
+
+\cvsection{Professional Experience}
+
+\cvevent
+{Independent AI Consultant & Platform Engineer}
+{International Clients}
+{2020 -- Present}
+{}
+
+\begin{itemize}
+\item Delivered AI, fintech, analytics, automation, and backend engineering solutions for international clients.
+\item Built cloud-native platforms, APIs, data pipelines, and AI-powered applications.
+\item Worked with startups and enterprise clients across US, UK, EU, AU, and Middle East markets.
+\item Led architecture, implementation, deployment, and technical delivery across multiple engagements.
+\end{itemize}
 
 \divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+\cvevent
+{Machine Learning Engineer}
+{RadioCord Technologies}
+{2024 -- 2025}
+{}
 
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
+\begin{itemize}
+\item Developed voice recognition, speech-to-text, and audio intelligence systems.
+\item Built AI-based noise cancellation algorithms and real-time audio processing pipelines.
+\item Optimized model performance, latency, and inference efficiency.
+\end{itemize}
+
+\divider
+
+\cvevent
+{Co-Founder & Technical Lead}
+{Futurova Technologies}
+{2022 -- 2023}
+{}
+
+\begin{itemize}
+\item Led development of IoT, telemetry, GPS tracking, and operational monitoring systems.
+\item Built MQTT-based cloud integrations and dashboard platforms.
+\item Drove product architecture and technical decision making.
+\end{itemize}
+
+\divider
+
+\cvevent
+{Co-Founder & Lead Developer}
+{VegiBee}
+{2021 -- 2022}
+{}
+
+\begin{itemize}
+\item Developed AgriTech platform supporting supply-chain visibility and logistics optimization.
+\item Built dashboards, analytics systems, and operational workflows.
+\item Integrated technology solutions for agricultural operations and stakeholder management.
+\end{itemize}
+
 \switchcolumn
 
-\cvsection{My Life Philosophy}
+\cvsection{Career Highlights}
 
-\begin{quote}
-``Something smart or heartfelt, preferably in one sentence.''
-\end{quote}
-
-\cvsection{Most Proud of}
-
-\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+\cvachievement{\faTrophy}{6+ Years}{Software, AI and Platform Engineering}
 
 \divider
 
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\cvachievement{\faProjectDiagram}{20+ Projects}{Delivered Across Multiple Domains}
 
 \divider
 
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\cvachievement{\faGlobe}{International Experience}{US, UK, EU, AU and Middle East}
 
-\cvsection{Strengths}
-
-% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
-
-\cvtag{Hard-working}
-\cvtag{Eye for detail}\\
-\cvtag{Motivator \& Leader}
-
-\divider\smallskip
-
-\cvtag{C++}
-\cvtag{Embedded Systems}\\
-\cvtag{Statistical Analysis}
-
-\cvsection{Languages}
-
-\cvskill{English}{5}
 \divider
 
-\cvskill{Spanish}{4}
+\cvachievement{\faRocket}{2 Startups}{Co-Founded and Built}
+
+\cvsection{Core Expertise}
+
+\cvtag{AI Agents}
+\cvtag{RAG}
+\cvtag{MCP}
+
+\smallskip
+
+\cvtag{Fine-Tuning}
+\cvtag{Document Intelligence}
+\cvtag{FastAPI}
+
+\smallskip
+
+\cvtag{System Design}
+\cvtag{Data Engineering}
+\cvtag{Cloud Architecture}
+
+\smallskip
+
+\cvtag{Microservices}
+\cvtag{Platform Engineering}
+
+\cvsection{Technology Stack}
+
+Python
+
+C/C++
+
+JavaScript
+
 \divider
 
-\cvskill{German}{3.5} %% Supports X.5 values.
+FastAPI
 
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
-\medskip
+Django
+
+Flask
+
+\divider
+
+PostgreSQL
+
+MySQL
+
+MongoDB
+
+Redis
+
+\divider
+
+AWS
+
+GCP
+
+Azure
+
+Docker
+
+Kubernetes
+
+\divider
+
+LLMs
+
+RAG
+
+Agents
+
+OCR
+
+NLP
+
+\divider
+
+Git
+
+Linux
+
+CI/CD
 
 \cvsection{Education}
 
-\cvevent{Ph.D.\ in Your Discipline}{Your University}{Sept 2002 -- June 2006}{}
-Thesis title: Wonderful Research
+\cvevent
+{Integrated MSc Mathematics}
+{SVNIT}
+{2014 -- 2020}
+{}
 
-\divider
+Focus Areas:
 
-\cvevent{M.Sc.\ in Your Discipline}{Your University}{Sept 2001 -- June 2002}{}
+Applied Mathematics
 
-\divider
+Computer Science Fundamentals
 
-\cvevent{B.Sc.\ in Your Discipline}{Stanford University}{Sept 1998 -- June 2001}{}
+Algorithms
 
-% \divider
+Problem Solving
 
-\cvsection{Referees}
+Computational Thinking
 
-% \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-{Address Line 1\\Address Line 2}
+\cvsection{Target Roles}
 
-\divider
+\cvtag{Founding Engineer}
 
-\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-{Address Line 1\\Address Line 2}
+\cvtag{AI Product Engineer}
 
+\cvtag{AI Systems Architect}
+
+\cvtag{Head of AI}
+
+\cvtag{Technical Co-Founder}
 
 \end{paracol}
-
 
 \end{document}
