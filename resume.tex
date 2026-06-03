@@ -1,46 +1,4 @@
-\documentclass[10pt,a4paper,withhyper]{altacv}
-
-\geometry{
-left=1.25cm,
-right=1.25cm,
-top=1.2cm,
-bottom=1.2cm,
-columnsep=1.2cm
-}
-
-\usepackage{paracol}
-
-\iftutex
-\setmainfont{Roboto Slab}
-\setsansfont{Lato}
-\renewcommand{\familydefault}{\sfdefault}
-\else
-\usepackage[rm]{roboto}
-\usepackage[defaultsans]{lato}
-\renewcommand{\familydefault}{\sfdefault}
-\fi
-
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkPastelRed}{HTML}{450808}
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{E7D192}
-
-\colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
-\renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\Large\rmfamily\bfseries}
-\renewcommand{\cvsubsectionfont}{\large\bfseries}
-
-\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\columnratio{0.28}
 
 \begin{document}
 
@@ -56,17 +14,19 @@ columnsep=1.2cm
 
 \makecvheader
 
-\columnratio{0.34}
-
-\begin{paracol}{2}
+% ==========================
+% FULL WIDTH SECTION
+% ==========================
 
 \cvsection{Executive Summary}
 
-Founding Engineer and AI Systems Architect with 6+ years of experience building AI platforms, fintech systems, data infrastructure, document intelligence solutions, cloud-native applications, and startup technology products.
+Founding Engineer and AI Systems Architect with 6+ years of experience building AI products, fintech systems, data platforms, document intelligence solutions, cloud-native applications, and startup technology platforms.
 
-Co-founded two startups, delivered 20+ projects across international markets, and led end-to-end product development from architecture and platform design through deployment and operational delivery.
+Co-founded two startups, delivered 20+ client projects across global markets, and led end-to-end product development from architecture through deployment and operational ownership.
 
-Specialized in AI agents, RAG systems, MCP integrations, backend architecture, document intelligence, platform engineering, and enterprise automation.
+Specialized in AI agents, RAG systems, MCP integrations, platform engineering, backend architecture, document intelligence, and enterprise automation.
+
+\bigskip
 
 \cvsection{AI Platform Portfolio}
 
@@ -75,7 +35,7 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 \begin{itemize}
 \item Architected investor onboarding, allocation management, transaction tracking, and blockchain payment verification workflows.
 \item Designed layered FastAPI architecture using service, repository, and API orchestration patterns.
-\item Built fintech operational tooling supporting digital asset fundraising and investor lifecycle management.
+\item Built fintech operational tooling supporting investor lifecycle management.
 \end{itemize}
 
 \divider
@@ -94,8 +54,8 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 
 \begin{itemize}
 \item Building AI-native procurement intelligence and vendor evaluation platform.
-\item Leveraging agentic workflows, retrieval systems, enterprise document processing, and workflow automation.
-\item Designed around reusable AI infrastructure supporting future enterprise procurement operations.
+\item Leveraging agentic workflows, RAG systems, and enterprise document processing.
+\item Designed reusable AI infrastructure supporting future procurement operations.
 \end{itemize}
 
 \divider
@@ -108,6 +68,8 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 \item Focused on low-latency signal processing and convergence optimization.
 \end{itemize}
 
+\bigskip
+
 \cvsection{Professional Experience}
 
 \cvevent
@@ -117,7 +79,7 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 {}
 
 \begin{itemize}
-\item Delivered AI, fintech, analytics, automation, and backend engineering solutions for international clients.
+\item Delivered AI, automation, fintech, analytics, and backend solutions for international clients.
 \item Built cloud-native platforms, APIs, data pipelines, and AI-powered applications.
 \item Worked with startups and enterprise clients across US, UK, EU, AU, and Middle East markets.
 \item Led architecture, implementation, deployment, and technical delivery across multiple engagements.
@@ -132,9 +94,9 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 {}
 
 \begin{itemize}
-\item Developed voice recognition, speech-to-text, and audio intelligence systems.
-\item Built AI-based noise cancellation algorithms and real-time audio processing pipelines.
-\item Optimized model performance, latency, and inference efficiency.
+\item Developed voice recognition, speech-to-text, and audio intelligence models.
+\item Built AI-based background noise cancellation algorithms and real-time audio processing pipelines.
+\item Optimized inference performance, latency, and model efficiency.
 \end{itemize}
 
 \divider
@@ -146,9 +108,9 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 {}
 
 \begin{itemize}
-\item Led development of IoT, telemetry, GPS tracking, and operational monitoring systems.
-\item Built MQTT-based cloud integrations and dashboard platforms.
-\item Drove product architecture and technical decision making.
+\item Led development of IoT, telemetry, GPS tracking, and dashboard systems.
+\item Built MQTT-based cloud integrations and operational monitoring platforms.
+\item Drove technical architecture and engineering decisions.
 \end{itemize}
 
 \divider
@@ -161,15 +123,18 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 
 \begin{itemize}
 \item Developed AgriTech platform supporting supply-chain visibility and logistics optimization.
-\item Built dashboards, analytics systems, and operational workflows.
-\item Integrated technology solutions for agricultural operations and stakeholder management.
+\item Integrated dashboards, analytics, and IoT-driven operational insights.
 \end{itemize}
+
+\newpage
+
+\begin{paracol}{2}
 
 \switchcolumn
 
 \cvsection{Career Highlights}
 
-\cvachievement{\faTrophy}{6+ Years}{Software, AI and Platform Engineering}
+\cvachievement{\faTrophy}{6+ Years}{AI, Platform & Software Engineering}
 
 \divider
 
@@ -177,11 +142,11 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 
 \divider
 
-\cvachievement{\faGlobe}{International Experience}{US, UK, EU, AU and Middle East}
+\cvachievement{\faRocket}{2 Startups}{Co-Founded and Built}
 
 \divider
 
-\cvachievement{\faRocket}{2 Startups}{Co-Founded and Built}
+\cvachievement{\faGlobe}{Global Markets}{US, UK, EU, AU, Middle East}
 
 \cvsection{Core Expertise}
 
@@ -208,61 +173,39 @@ Specialized in AI agents, RAG systems, MCP integrations, backend architecture, d
 
 \cvsection{Technology Stack}
 
-Python
+Languages
 
-C/C++
-
-JavaScript
+Python, C/C++, JavaScript
 
 \divider
 
-FastAPI
+AI
 
-Django
-
-Flask
+LLMs, RAG, Agents, MCP, OCR, NLP
 
 \divider
 
-PostgreSQL
+Backend
 
-MySQL
-
-MongoDB
-
-Redis
+FastAPI, Django, Flask
 
 \divider
 
-AWS
+Infrastructure
 
-GCP
-
-Azure
-
-Docker
-
-Kubernetes
+Docker, Kubernetes, AWS, GCP, Azure
 
 \divider
 
-LLMs
+Data
 
-RAG
-
-Agents
-
-OCR
-
-NLP
+PostgreSQL, MySQL, MongoDB, Redis
 
 \divider
 
-Git
+Tools
 
-Linux
-
-CI/CD
+Git, Linux, CI/CD
 
 \cvsection{Education}
 
@@ -271,8 +214,6 @@ CI/CD
 {SVNIT}
 {2014 -- 2020}
 {}
-
-Focus Areas:
 
 Applied Mathematics
 
@@ -284,17 +225,21 @@ Problem Solving
 
 Computational Thinking
 
-\cvsection{Target Roles}
+\switchcolumn*
 
-\cvtag{Founding Engineer}
+\cvsection{Leadership & Impact}
 
-\cvtag{AI Product Engineer}
+\begin{itemize}
+\item Built and shipped AI-powered platforms spanning document intelligence, workflow automation, investor operations, and analytics.
 
-\cvtag{AI Systems Architect}
+\item Delivered solutions for clients across US, UK, EU, AU, and Middle East markets.
 
-\cvtag{Head of AI}
+\item Experience across fintech, identity verification, digital assets, document intelligence, automation, and startup operations.
 
-\cvtag{Technical Co-Founder}
+\item Co-founded two startups and led product architecture, engineering execution, and technical decision-making.
+
+\item Building a portfolio of AI-native enterprise platforms focused on procurement intelligence, startup operations, compliance automation, and document intelligence.
+\end{itemize}
 
 \end{paracol}
 
