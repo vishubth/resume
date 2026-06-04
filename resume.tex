@@ -1,12 +1,56 @@
-\columnratio{0.28}
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+\geometry{
+left=1.1cm,
+right=1.1cm,
+top=1.0cm,
+bottom=1.0cm,
+columnsep=1.0cm
+}
+
+\usepackage{paracol}
+
+\iftutex
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\else
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\Large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+
+% --- KEEP YOUR EXISTING PREAMBLE UNCHANGED ABOVE THIS POINT ---
 
 \begin{document}
 
 \name{Vishal Shrivastava}
-\tagline{Founding Engineer | AI Systems Architect | Product Builder}
+\tagline{Founding Engineer • AI Systems Architect • Product Builder}
 
 \personalinfo{
-\email{[vishubth@gmail.com](mailto:vishubth@gmail.com)}
+\email{vishubth@gmail.com}
 \location{Bangalore, India}
 \linkedin{vishushri}
 \github{vishubth}
@@ -14,148 +58,123 @@
 
 \makecvheader
 
-% ==========================
-% FULL WIDTH SECTION
-% ==========================
+% =====================================================
+% FULL WIDTH SECTIONS
+% =====================================================
 
 \cvsection{Executive Summary}
 
-Founding Engineer and AI Systems Architect with 6+ years of experience building AI products, fintech systems, data platforms, document intelligence solutions, cloud-native applications, and startup technology platforms.
+Founding Engineer and AI Systems Architect with 6+ years building AI platforms, fintech systems, document intelligence solutions, and cloud-native products.
 
-Co-founded two startups, delivered 20+ client projects across global markets, and led end-to-end product development from architecture through deployment and operational ownership.
+Delivered 20+ projects across international markets and co-founded two startups from product conception through deployment and operational delivery.
 
-Specialized in AI agents, RAG systems, MCP integrations, platform engineering, backend architecture, document intelligence, and enterprise automation.
-
-\bigskip
-
-\cvsection{AI Platform Portfolio}
-
-\cvevent{Digital Asset Fundraising Operations Platform (NoGuy)}{}{}{}
-
-\begin{itemize}
-\item Architected investor onboarding, allocation management, transaction tracking, and blockchain payment verification workflows.
-\item Designed layered FastAPI architecture using service, repository, and API orchestration patterns.
-\item Built fintech operational tooling supporting investor lifecycle management.
-\end{itemize}
-
-\divider
-
-\cvevent{AI Document Intelligence Engine}{}{}{}
-
-\begin{itemize}
-\item Built OCR and LLM-powered document intelligence workflows.
-\item Implemented extraction, chunking, schema validation, and profile generation pipelines.
-\item Designed for compliance, onboarding, due diligence, and identity intelligence use cases.
-\end{itemize}
-
-\divider
-
-\cvevent{AI Procurement Intelligence Platform}{}{}{}
-
-\begin{itemize}
-\item Building AI-native procurement intelligence and vendor evaluation platform.
-\item Leveraging agentic workflows, RAG systems, and enterprise document processing.
-\item Designed reusable AI infrastructure supporting future procurement operations.
-\end{itemize}
-
-\divider
-
-\cvevent{ANC-VSNLMS Active Noise Cancellation Platform}{}{}{}
-
-\begin{itemize}
-\item Developed adaptive DSP platform implementing VSNLMS filtering.
-\item Built real-time audio processing, benchmarking, and visualization pipelines.
-\item Focused on low-latency signal processing and convergence optimization.
-\end{itemize}
-
-\bigskip
-
-\cvsection{Professional Experience}
-
-\cvevent
-{Independent AI Consultant & Platform Engineer}
-{International Clients}
-{2020 -- Present}
-{}
-
-\begin{itemize}
-\item Delivered AI, automation, fintech, analytics, and backend solutions for international clients.
-\item Built cloud-native platforms, APIs, data pipelines, and AI-powered applications.
-\item Worked with startups and enterprise clients across US, UK, EU, AU, and Middle East markets.
-\item Led architecture, implementation, deployment, and technical delivery across multiple engagements.
-\end{itemize}
-
-\divider
-
-\cvevent
-{Machine Learning Engineer}
-{RadioCord Technologies}
-{2024 -- 2025}
-{}
-
-\begin{itemize}
-\item Developed voice recognition, speech-to-text, and audio intelligence models.
-\item Built AI-based background noise cancellation algorithms and real-time audio processing pipelines.
-\item Optimized inference performance, latency, and model efficiency.
-\end{itemize}
-
-\divider
-
-\cvevent
-{Co-Founder & Technical Lead}
-{Futurova Technologies}
-{2022 -- 2023}
-{}
-
-\begin{itemize}
-\item Led development of IoT, telemetry, GPS tracking, and dashboard systems.
-\item Built MQTT-based cloud integrations and operational monitoring platforms.
-\item Drove technical architecture and engineering decisions.
-\end{itemize}
-
-\divider
-
-\cvevent
-{Co-Founder & Lead Developer}
-{VegiBee}
-{2021 -- 2022}
-{}
-
-\begin{itemize}
-\item Developed AgriTech platform supporting supply-chain visibility and logistics optimization.
-\item Integrated dashboards, analytics, and IoT-driven operational insights.
-\end{itemize}
-
-\newpage
-
-\begin{paracol}{2}
-
-\switchcolumn
+Specialized in AI Agents, RAG Systems, MCP Integrations, backend architecture, platform engineering, and enterprise automation.
 
 \cvsection{Career Highlights}
 
-\cvachievement{\faTrophy}{6+ Years}{AI, Platform & Software Engineering}
-
-\divider
-
+\begin{minipage}[t]{0.48\textwidth}
+\cvachievement{\faTrophy}{6+ Years}{Software, AI and Platform Engineering}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
 \cvachievement{\faProjectDiagram}{20+ Projects}{Delivered Across Multiple Domains}
+\end{minipage}
 
-\divider
+\vspace{0.5em}
 
+\begin{minipage}[t]{0.48\textwidth}
+\cvachievement{\faGlobe}{International Experience}{US, UK, EU, AU and Middle East}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
 \cvachievement{\faRocket}{2 Startups}{Co-Founded and Built}
+\end{minipage}
+
+\cvsection{Selected AI Platforms}
+
+\cvevent{Digital Asset Fundraising Operations Platform (NoGuy)}{}{}{} 
+
+\begin{itemize}
+\item Investor onboarding, allocation management, transaction tracking, and blockchain payment verification.
+\item Layered FastAPI architecture using service, repository, and orchestration patterns.
+\end{itemize}
 
 \divider
 
-\cvachievement{\faGlobe}{Global Markets}{US, UK, EU, AU, Middle East}
+\cvevent{AI Document Intelligence Engine}{}{}{} 
+
+\begin{itemize}
+\item OCR and LLM-powered document intelligence workflows.
+\item Extraction, chunking, schema validation, and profile generation pipelines.
+\end{itemize}
+
+\divider
+
+\cvevent{AI Procurement Intelligence Platform}{}{}{} 
+
+\begin{itemize}
+\item AI-native procurement intelligence and vendor evaluation platform.
+\item Agentic workflows, retrieval systems, and enterprise document processing.
+\end{itemize}
+
+
+\cvsection{Professional Experience}
+
+% KEEP ALL EXPERIENCE ENTRIES HERE FULL WIDTH
+
+\cvevent{Independent AI Consultant \& Platform Engineer}{International Clients}{2020 -- Present}{}
+
+\begin{itemize}
+\item Delivered AI, fintech, analytics, automation, and backend engineering solutions.
+\item Built cloud-native platforms, APIs, data pipelines, and AI-powered applications.
+\item Worked with startups and enterprise clients across US, UK, EU, AU, and Middle East markets.
+\item Led architecture, implementation, deployment, and technical delivery.
+\end{itemize}
+
+\divider
+
+\cvevent{Machine Learning Engineer}{RadioCord Technologies}{2024 -- 2025}{}
+
+\begin{itemize}
+\item Developed voice recognition, speech-to-text, and audio intelligence systems.
+\item Built AI-based noise cancellation algorithms and real-time audio processing pipelines.
+\item Optimized model performance, latency, and inference efficiency.
+\end{itemize}
+
+\divider
+
+\cvevent{Co-Founder \& Technical Lead}{Futurova Technologies}{2022 -- 2023}{}
+
+\begin{itemize}
+\item Led development of IoT, telemetry, GPS tracking, and operational monitoring systems.
+\item Built MQTT-based cloud integrations and dashboard platforms.
+\item Drove product architecture and technical decision making.
+\end{itemize}
+
+\divider
+
+\cvevent{Co-Founder \& Lead Developer}{VegiBee}{2021 -- 2022}{}
+
+\begin{itemize}
+\item Developed AgriTech platform supporting supply-chain visibility and logistics optimization.
+\item Built dashboards, analytics systems, and operational workflows.
+\item Integrated technology solutions for agricultural operations.
+\end{itemize}
+
+
+
+% =====================================================
+% TWO COLUMN STARTS HERE
+% =====================================================
+
+\columnratio{0.55}
+\begin{paracol}{2}
 
 \cvsection{Core Expertise}
 
 \cvtag{AI Agents}
 \cvtag{RAG}
 \cvtag{MCP}
-
-\smallskip
-
 \cvtag{Fine-Tuning}
 \cvtag{Document Intelligence}
 \cvtag{FastAPI}
@@ -165,81 +184,78 @@ Specialized in AI agents, RAG systems, MCP integrations, platform engineering, b
 \cvtag{System Design}
 \cvtag{Data Engineering}
 \cvtag{Cloud Architecture}
-
-\smallskip
-
 \cvtag{Microservices}
 \cvtag{Platform Engineering}
 
 \cvsection{Technology Stack}
 
-Languages
+\textbf{Languages}
 
-Python, C/C++, JavaScript
+\smallskip
 
-\divider
+\cvtag{Python}
+\cvtag{C/C++}
+\cvtag{JavaScript}
 
-AI
+\medskip
 
-LLMs, RAG, Agents, MCP, OCR, NLP
+\textbf{Frameworks}
 
-\divider
+\smallskip
 
-Backend
+\cvtag{FastAPI}
+\cvtag{Django}
+\cvtag{Flask}
 
-FastAPI, Django, Flask
+\medskip
 
-\divider
+\textbf{Databases}
 
-Infrastructure
+\smallskip
 
-Docker, Kubernetes, AWS, GCP, Azure
+\cvtag{PostgreSQL}
+\cvtag{MySQL}
+\cvtag{MongoDB}
+\cvtag{Redis}
 
-\divider
+\medskip
 
-Data
+\textbf{Cloud \& Infrastructure}
 
-PostgreSQL, MySQL, MongoDB, Redis
+\smallskip
 
-\divider
+\cvtag{AWS}
+\cvtag{GCP}
+\cvtag{Azure}
+\cvtag{Docker}
+\cvtag{Kubernetes}
 
-Tools
+\medskip
 
-Git, Linux, CI/CD
+\textbf{AI}
+
+\smallskip
+
+\cvtag{LLMs}
+\cvtag{RAG}
+\cvtag{Agents}
+\cvtag{OCR}
+\cvtag{NLP}
+
+\switchcolumn
 
 \cvsection{Education}
 
-\cvevent
-{Integrated MSc Mathematics}
-{SVNIT}
-{2014 -- 2020}
-{}
-
-Applied Mathematics
-
-Computer Science Fundamentals
-
-Algorithms
-
-Problem Solving
-
-Computational Thinking
-
-\switchcolumn*
-
-\cvsection{Leadership & Impact}
+\cvevent{Integrated MSc Mathematics}{SVNIT}{2014 -- 2020}{}
 
 \begin{itemize}
-\item Built and shipped AI-powered platforms spanning document intelligence, workflow automation, investor operations, and analytics.
-
-\item Delivered solutions for clients across US, UK, EU, AU, and Middle East markets.
-
-\item Experience across fintech, identity verification, digital assets, document intelligence, automation, and startup operations.
-
-\item Co-founded two startups and led product architecture, engineering execution, and technical decision-making.
-
-\item Building a portfolio of AI-native enterprise platforms focused on procurement intelligence, startup operations, compliance automation, and document intelligence.
+\item Applied Mathematics
+\item Computer Science Fundamentals
+\item Algorithms
+\item Problem Solving
+\item Computational Thinking
 \end{itemize}
+
 
 \end{paracol}
 
